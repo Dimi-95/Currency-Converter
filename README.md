@@ -8,4 +8,4 @@
 
 Converted amount of money, and the currency it got converted in, will be shown at the end
 
-![Happy Christmas](result.pn)
+![Happy Christmas](result.png)
