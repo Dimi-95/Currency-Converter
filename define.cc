@@ -1,7 +1,7 @@
-#include "declare.h"
+#include "convert.h"
 
 //it gives us the number for the first and the second chosen currency
-void currency(int f_currency, int s_currency, double &val2)
+void Convert::setCurrency(int f_currency, int s_currency, double &e_rate, string &c_name)
 {
 
     if (f_currency == 1)
@@ -13,12 +13,14 @@ void currency(int f_currency, int s_currency, double &val2)
         else if(s_currency == 2)
         {
             
-            val2 = 1.21666;
+            e_rate = 1.21666;
+            c_name = "Dollar";
         }
         else if(s_currency == 3)
         {
             
-            val2 = 133.28273;
+            e_rate = 133.28273;
+            c_name = "Yen";
         }
         else{
 
@@ -30,7 +32,8 @@ void currency(int f_currency, int s_currency, double &val2)
         if(s_currency == 1)
         {
             
-            val2 = 0.82193;
+            e_rate = 0.82193;
+            c_name = "Eur";
         }
         else if(s_currency == 2)
         {
@@ -39,7 +42,8 @@ void currency(int f_currency, int s_currency, double &val2)
         else if(s_currency == 3)
         {
             
-            val2 = 109.54850;
+            e_rate = 109.54850;
+            c_name = "Yen";
         }
         else{
 
@@ -51,12 +55,14 @@ void currency(int f_currency, int s_currency, double &val2)
         if(s_currency == 1)
         {
             
-            val2 = 0.00750;
+            e_rate = 0.00750;
+            c_name = "Eur";
         }
         else if(s_currency == 2)
         {
             
-            val2 = 0.00913;
+            e_rate = 0.00913;
+            c_name = "Dollar";
         }
         else if(s_currency == 3)
         {

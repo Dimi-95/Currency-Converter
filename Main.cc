@@ -1,5 +1,7 @@
 #include <iostream>
-#include "declare.h"
+#include "convert.h"
+#include <string>
+using string = std::string;
 
 
 
@@ -7,7 +9,10 @@
 int main()
 {
     int f_currency, s_currency;
-    double val1, val2;
+    double amount, e_rate;
+    double result;
+    string c_name;
+
 
     std::cout << "Choose the currency you want to convert from:\n" << std::endl;
     std::cout << "(1)EUR - (2)USD - (3)JPY\n";
@@ -18,15 +23,18 @@ int main()
     std::cin >> s_currency;
 
     std::cout << "Enter the amount of money:\n" << std::endl;
-    std::cin >> val1;
+    std::cin >> amount;
 
-    currency(f_currency, s_currency,val2);
+    Convert currency;
 
-    convert output;
+    currency.setCurrency(f_currency, s_currency,e_rate, c_name);
 
-    output.convertion(val1, val2);
+    Convert output;
+    
+    output.convertion(amount, e_rate, result);
 
-    std::cout << "The Output is: "<< val2 << std::endl;
+    std::cout << "The Output from the Class is : " << result << " " <<c_name << std::endl;
+
     
     
 
